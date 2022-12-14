@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   min-height: 100vh;
+   background: #232423;
+}
+.box{
+    position: relative;
+    width: 380px;
+    height: 420px;
+    background: #1c1c1c;
+    border-radius:8px;
+    overflow: hidden;
+    
+}
+.box::after{
+    content: ' ';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,
+    #0cedf9,#0cedf9);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+
+}
+.box::before{
+    content: ' ';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,
+    #0cedf9,#04c9d3);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+
+}
+@keyframes animate 
+{
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+.form {
+    position: absolute;
+    inset: 3px;
+    background: #28292d;
+    z-index: 10;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+}
+.form h2{
+    color: #04c9d3;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+.inputBox{
+    position: relative;
+    width: 300px;
+    margin-top: 35px;
+}
+.inputBox input{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px ;
+    background: transparent;
+    border: none;
+    color: #feffff;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+}
+.inputBox span
+{
+    position: absolute;
+    
+    left: 0;
+    padding: -3rem -20rem -20rem;
+    font-size: 0.75em;
+    color: #8f8f8f;
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+.inputBox input:valid ~span,
+.inputBox input:focus ~span
+{
+    color: #04c9d3;
+    transform: translateY(-45px);
+    font-size: 0.75em;
+}
+/* .inputBox i
+{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #04c9d3;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+} */
+.link2{
+    padding-top: 2rem;
+   
+    
+}
+.link a{
+    text-size-adjust: 20px;
+    font-size: smaller;
+    color: #0baefa;
+    margin: 11rem;
+}
+.loginbox{
+    box-sizing: content-box;
+    background-color: ;
+    margin-right: 2rem;
+
+}
+.loginbox:hover{
+    color: #0cedf9;
+    box-sizing:content-box;
+    border-radius: 2rem;
+    
+    
+}
+p{
+    color: #8f8f8f;
+    font-size: smaller;
+    margin-left: 1.5rem;
+}
+p a{
+    color: #0baefa;
+}
+a:hover{
+    color: #0cedf9;
+}
+
+
+
+
+
+
+
+
